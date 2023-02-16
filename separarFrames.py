@@ -16,12 +16,10 @@ while True:
     if count % 8 != 0:
         count += 1
         continue
-
     file_name = "IMG-011-%d.jpg" % count
     file_path = os.path.join(folder_name, file_name)
 
- 
     cv2.imwrite(file_path, frame)
     count += 1
-
+    
 video.release()

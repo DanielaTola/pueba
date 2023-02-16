@@ -17,9 +17,9 @@ for img_name in selected_imgs:
     count=count+1
     img = Image.open(os.path.join(src_dir, img_name))
     # Renderizar la imagen
-    #img = img.resize((256, 256), Image.ANTIALIAS)
+    img = img.resize((256, 256), Image.ANTIALIAS)
     # Normalizar la imagen
-    #img = (np.array(img) / 255.0).astype(np.float32)
+    img = (np.array(img) / 255.0).astype(np.float32)
     new_name = 'IMG-ETAPA-04-0'+str(count)+'.jpg'
     print("Image:"+new_name)
     img.save(os.path.join(dst_dir, new_name))
